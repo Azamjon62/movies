@@ -19,6 +19,8 @@ const Header = () => {
     const navigate = useNavigate();
     const location = useLocation();
 
+    const isHomePage = location.pathname === "/";
+
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [location]);
@@ -90,7 +92,7 @@ const Header = () => {
                     >
                         TV Shows
                     </li>
-                    <li className="menuItem">
+                    <li className={`menuItem ${isHomePage ? "hidden" : ""}`}>
                         <HiOutlineSearch onClick={openSearch} />
                     </li>
                 </ul>
