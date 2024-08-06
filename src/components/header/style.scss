@@ -1,5 +1,9 @@
 @import "../../mixins.scss";
 
+.hidden {
+    display: none !important;
+}
+
 .header {
     position: fixed;
     transform: translateY(0);
@@ -101,6 +105,12 @@
                 align-items: flex-start;
                 &:last-child {
                     display: none;
+                }
+                &.searchIcon {
+                    display: block;
+                }
+                &.hidden {
+                    display: none !important;
                 }
             }
         }

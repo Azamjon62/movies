@@ -92,13 +92,16 @@ const Header = () => {
                     >
                         TV Shows
                     </li>
-                    <li className={`menuItem ${isHomePage ? "hidden" : ""}`}>
+                    <li className={`menuItem searchIcon ${isHomePage ? "hidden" : ""}`}>
                         <HiOutlineSearch onClick={openSearch} />
                     </li>
                 </ul>
 
                 <div className="mobileMenuItems">
-                    <HiOutlineSearch onClick={openSearch} />
+                    <HiOutlineSearch
+                        className={`${isHomePage ? "hidden" : ""}`}
+                        onClick={openSearch}
+                    />
                     {mobileMenu ? (
                         <VscChromeClose onClick={() => setMobileMenu(false)} />
                     ) : (
